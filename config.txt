@@ -1,0 +1,7 @@
+host=103.xxx.xxx.xxx
+port=443
+pudp=7300
+user=isidisini
+pass=isidisini
+sni=www.isibug.com
+mode=0
