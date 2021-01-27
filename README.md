@@ -1,4 +1,4 @@
-# xderm-mini
+# xderm-mini stb openwrt
 - auto installer xderm-mini by Vito H.S.
 - xderm mini by Ryan Fauzi and modded by Wegare.
 - wajib konek ke internet ketika penginstalan. 
