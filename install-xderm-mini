@@ -1,0 +1,127 @@
+#!/bin/bash
+
+#-- colors --#
+#R='\e[1;31m' #RED
+#G='\e[1;32m' #GREEN
+#B='\e[1;34m' #BLUE
+#Y='\e[1;33m' #YELLOW
+#C='\e[1;36m' #CYAN
+W='\e[1;37m' #WHITE
+##############
+
+#-- colors v2 --#
+R='\e[31;1m' #RED
+G='\e[32;1m' #GREEN
+Y='\e[33;1m' #YELLOW
+DB='\e[34;1m' #DARKBLUE
+P='\e[35;1m' #PURPLE
+LB='\e[36;1m' #LIGHTBLUE
+
+clear
+echo -e "$Y"
+opkg update
+
+sleep 2
+
+cek=$(find /usr/bin/)
+if [[ $cek == *"tun2socks"* ]]; then
+rm /usr/bin/*socks
+echo -e "$R file duplikat xderm-mini berhasil dihapus"
+fi
+sleep 1
+cek=$(find /usr/bin/)
+if [[ $cek == *"tun2socks.1"* ]]; then
+rm /usr/bin/*socks.1
+echo -e "$R file duplikat xderm-mini berhasil dihapus"
+fi
+sleep 1
+cek=$(find /usr/bin/)
+if [[ $cek == *"tun2socks.2"* ]]; then
+rm /usr/bin/*socks.2
+echo -e "$R file duplikat xderm-mini berhasil dihapus"
+fi
+sleep 1
+cek=$(find /usr/bin/)
+if [[ $cek == *"derm-mini"* ]]; then
+rm /usr/bin/xderm-mini
+echo -e "$R file duplikat xderm-mini berhasil dihapus"
+fi
+sleep 1
+cek=$(find /usr/bin/)
+if [[ $cek == *"derm-mini.1"* ]]; then
+rm /usr/bin/*xderm-mini.1
+echo -e "$R file duplikat xderm-mini berhasil dihapus"
+fi
+sleep 1
+cek=$(find /usr/bin/)
+if [[ $cek == *"derm-mini.2"* ]]; then
+rm /usr/bin/*xderm-mini.2
+echo -e "$R file duplikat xderm-mini berhasil dihapus"
+fi
+sleep 1
+cek=$(find /root/)
+if [[ $cek == *"fig.txt"* ]]; then
+rm /root/*fig.txt
+echo -e "$R file duplikat xderm-mini berhasil dihapus"
+fi
+sleep 1
+cek=$(find /root/)
+if [[ $cek == *"fig.txt.1"* ]]; then
+rm /root/*fig.txt.1
+echo -e "$R file duplikat xderm-mini berhasil dihapus"
+fi
+sleep 1
+cek=$(find /root/)
+if [[ $cek == *"fig.txt.2"* ]]; then
+rm /root/*fig.txt.2
+echo -e "$R file duplikat xderm-mini berhasil dihapus"
+fi
+
+
+sleep 2
+echo -e "$LB"
+wget --no-check-certificate "https://raw.githubusercontent.com/vitoharhari/xderm-mini/main/xderm-mini" -P /usr/bin/ && chmod +x /usr/bin/xderm-mini
+wget --no-check-certificate "https://github.com/vitoharhari/xderm-mini/raw/main/badvpn-tun2socks" -P /usr/bin/ && chmod +x /usr/bin/badvpn-tun2socks
+wget --no-check-certificate "https://raw.githubusercontent.com/vitoharhari/xderm-mini/main/config.txt" -P /root/ && chomd +x /root/config.txt
+mkdir /root/xderm-mini/
+wget --no-check-certificate "https://github.com/vitoharhari/xderm-mini/raw/main/coreutils-base64_8.32-6_aarch64_cortex-a53.ipk" -P /root/xderm-mini/
+wget --no-check-certificate "https://github.com/vitoharhari/xderm-mini/raw/main/v2ray-core_4.34.0-1_aarch64_cortex-a53.ipk" -P /root/xderm-mini/
+opkg install /root/xderm-mini/*.ipk
+opkg install procps-ng-ps git curl sshpass python3-pip
+python3 -m pip install requests beautifulsoup4
+opkg install openssl-util
+rm /root/xderm-mini/coreutils-base64_8.32-6_aarch64_cortex-a53.ipk
+rm /root/xderm-mini/v2ray-core_4.34.0-1_aarch64_cortex-a53.ipk
+rmdir /root/xderm-mini/
+
+clear
+echo -e "\033[1;31m xderm-mini selesai di install\033[0m"
+echo -e "\033[1;32m xderm-mini by Ryan Fauzi and modded by Wegare\033[0m"
+echo -e "\033[1;33m auto installer xderm-mini by VITO H.S\033[0m"
+echo -e "\033[1;34m terima kasih dan sampai jumpa di script auto installer selanjutnya\033[0m"
+sleep 1
+echo -e "\033[7;36m Mempersiapkan xderm-mini.... \033[0m"
+sleep 2
+echo -e "\033[1;31m ~         (10%) \033[0m"
+sleep 1
+echo -e "\033[1;31m ~~        (20%) \033[0m"
+sleep 1
+echo -e "\033[1;32m ~~~       (30%) \033[0m"
+sleep 1
+echo -e "\033[1;32m ~~~~      (40%) \033[0m"
+sleep 1
+echo -e "\033[1;33m ~~~~~     (50%) \033[0m"
+sleep 1
+echo -e "\033[1;33m ~~~~~~    (60%) \033[0m"
+sleep 1
+echo -e "\033[1;34m ~~~~~~~   (70%) \033[0m"
+sleep 1
+echo -e "\033[1;34m ~~~~~~~~  (80%) \033[0m"
+sleep 1
+echo -e "\033[1;35m ~~~~~~~~~ (90%) \033[0m"
+sleep 1
+echo -e "\033[1;35m ~~~~~~~~~~(100%) \033[0m"
+sleep 2
+clear
+xderm-mini
+rm /usr/bin/install-xderm-mini
