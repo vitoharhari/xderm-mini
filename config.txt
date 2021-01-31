@@ -1,7 +1,8 @@
-host=103.xxx.xxx.xxx
+host=103.157.1xx.xx
 port=443
 pudp=7300
-user=isidisini
-pass=isidisini
-sni=www.isibug.com
+user=ryanxxxx
+pass=123xxx
+sni=www.xxx.xx
+vmess://eyJhZGQiOixxxxxxx
 mode=0
