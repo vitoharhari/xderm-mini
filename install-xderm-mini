@@ -90,6 +90,8 @@ opkg install /root/xderm-mini/*.ipk
 opkg install procps-ng-ps git curl sshpass python3-pip
 python3 -m pip install requests beautifulsoup4
 opkg install openssl-util
+opkg install php7 php7-cgi php7-mod-session
+opkg install https-dns-proxy
 rm /root/xderm-mini/coreutils-base64_8.32-6_aarch64_cortex-a53.ipk
 rm /root/xderm-mini/v2ray-core_4.34.0-1_aarch64_cortex-a53.ipk
 rmdir /root/xderm-mini/
